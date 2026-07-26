@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shah Mir Aizaz | Finance Portfolio | Vancouver, BC</title>
+<meta name="description" content="Finance portfolio of Shah Mir Aizaz: financial controller and FP&A professional. Multi-entity consolidation, cash flow forecasting, borrowing base models, valuation, live dashboards, and finance automation.">
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#faf9f7; --surface:#ffffff; --surface-2:#f2f1ed;
+    --ink:#141a21; --ink-2:#4c545e; --ink-3:#7c848e;
+    --line:#e4e2dc; --accent:#2a78d6; --accent-ink:#1d5eae; --accent-soft:#e8f0fb;
+    --good:#1baf7a;
+    --shadow:0 1px 2px rgba(20,26,33,.05), 0 8px 24px rgba(20,26,33,.06);
+  }
+  [data-theme="dark"]{
+    color-scheme: dark;
+    --bg:#12151a; --surface:#1a1e25; --surface-2:#20252d;
+    --ink:#f2f3f5; --ink-2:#b8bec6; --ink-3:#858d97;
+    --line:#2b313a; --accent:#3987e5; --accent-ink:#7ab1f0; --accent-soft:#1d2a3c;
+    --good:#199e70;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:.1px}
+  a{color:var(--accent-ink);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  nav.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav.top .wrap{display:flex;align-items:center;gap:22px;height:58px}
+  .brand{font-family:Georgia,serif;font-size:17px;font-weight:700;color:var(--ink)}
+  nav.top .links{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap}
+  nav.top .links a{color:var(--ink-2);font-size:14px}
+  nav.top .links a:hover{color:var(--accent-ink);text-decoration:none}
+  #themeBtn{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:8px;padding:5px 11px;font-size:13px;cursor:pointer}
+
+  .hero{padding:64px 0 40px}
+  .loc{display:inline-flex;align-items:center;gap:7px;color:var(--ink-2);font-size:15px;font-weight:600;margin-bottom:16px}
+  .loc svg{width:16px;height:16px;color:var(--accent)}
+  .hero h1{font-size:clamp(38px,6vw,58px);line-height:1.08;margin-bottom:10px}
+  .hero p.lead{font-size:18.5px;color:var(--ink-2);max-width:780px;margin-bottom:26px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:9px;padding:11px 18px;font-size:14.5px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+  .btn:hover{text-decoration:none;border-color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-ink)}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin:34px 0 0}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+  .tile .n{font-family:Georgia,serif;font-size:33px;font-weight:700;line-height:1.1;color:var(--ink)}
+  .tile .n em{font-style:normal;color:var(--accent)}
+  .tile .l{font-size:13.5px;color:var(--ink-2);margin-top:6px}
+
+  section{padding:56px 0 8px}
+  .sec-kicker{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--accent-ink);font-weight:700;margin-bottom:8px}
+  section h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:12px}
+  .sec-intro{color:var(--ink-2);max-width:840px;margin-bottom:28px;font-size:16px}
+
+  .xp{display:grid;gap:14px}
+  .xp .row{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow);display:grid;grid-template-columns:minmax(230px,280px) 1fr;gap:18px}
+  @media(max-width:760px){.xp .row{grid-template-columns:1fr}}
+  .xp h3{font-size:19px;margin-bottom:2px}
+  .xp .org{color:var(--accent-ink);font-weight:600;font-size:14.5px}
+  .xp .when{color:var(--ink-3);font-size:13px;margin-top:4px}
+  .xp ul{padding-left:18px;color:var(--ink-2);font-size:14.6px;display:grid;gap:7px}
+
+  .group{margin:34px 0 6px;display:flex;align-items:center;gap:14px}
+  .group .tag{background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;border-radius:8px;padding:6px 12px;white-space:nowrap}
+  .group .line{flex:1;height:1px;background:var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px;margin-top:16px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+  .card h3{font-size:18.5px;line-height:1.3}
+  .card .meta{font-size:12.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-top:2px}
+  .card p{color:var(--ink-2);font-size:14.8px}
+  .card ul{padding-left:18px;color:var(--ink-2);font-size:14.3px;display:grid;gap:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:6px}
+  .chip{font-size:12px;font-weight:600;color:var(--ink-2);background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 11px;white-space:nowrap}
+  .chip.hi{color:var(--accent-ink);background:var(--accent-soft);border-color:transparent}
+
+  .shot{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;display:block}
+  .shot img{display:block;width:100%;height:auto}
+  .shots2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:560px){.shots2{grid-template-columns:1fr}}
+  .caption{font-size:12px;color:var(--ink-3);margin-top:-4px}
+
+  #lightbox{position:fixed;inset:0;background:rgba(10,12,16,.9);display:none;z-index:100;place-items:center;padding:28px;cursor:zoom-out}
+  #lightbox.on{display:grid}
+  #lightbox img{max-width:96vw;max-height:92vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+
+  .band{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  @media(max-width:860px){.band{grid-template-columns:1fr}}
+  .band h3{font-size:21px;margin-bottom:10px}
+  .band p{color:var(--ink-2);font-size:15px;margin-bottom:12px}
+  .band ul{padding-left:18px;color:var(--ink-2);font-size:14.5px;display:grid;gap:7px;margin-bottom:14px}
+
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+  .skill h3{font-size:16px;margin-bottom:10px}
+  .skill .chips{margin-top:0}
+
+  .edu{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+  .edu h3{font-size:18px}
+  .edu p{color:var(--ink-2);font-size:14.8px;margin-top:6px}
+
+  .contact{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:36px;text-align:center;margin-bottom:20px}
+  .contact h2{margin-bottom:8px}
+  .contact p{color:var(--ink-2);max-width:640px;margin:0 auto 20px}
+  footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--ink-3);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <span class="brand">Shah Mir Aizaz</span>
+    <div class="links">
+      <a href="#experience">Experience</a>
+      <a href="#work">Featured Work</a>
+      <a href="#platform">Live Platform</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button id="themeBtn" aria-label="Toggle dark mode">Dark</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Shah Mir Aizaz</h1>
+    <span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Vancouver, BC</span>
+    <p class="lead">I build the systems growing companies run on: multi-entity closes and consolidation, weekly cash visibility, lender-ready borrowing base models, pricing strategy, valuations, and live reporting that refreshes itself straight from the accounting stack. Below is the real work: the dashboards, workbooks, and decks, exactly as they run.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:shahmir99@live.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/shah-mir-aizaz-597928190" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="tel:+19423809015">+1 (942) 380 9015</a>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="n"><em>66</em></div><div class="l">Live client dashboards auto-refreshing from QuickBooks Online</div></div>
+      <div class="tile"><div class="n"><em>53</em> weeks</div><div class="l">Forward cash visibility in a single integrated lender model</div></div>
+      <div class="tile"><div class="n"><em>3</em> entities</div><div class="l">Consolidated on a semimonthly close cadence at Girl &amp; Dug</div></div>
+      <div class="tile"><div class="n"><em>$47M</em></div><div class="l">Quarterly global forecasts owned in corporate FP&amp;A</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-kicker">Where I have worked</div>
+    <h2>Experience</h2>
+    <div class="xp">
+      <div class="row">
+        <div>
+          <h3>Financial Controller</h3>
+          <div class="org">Girl &amp; Dug Inc.</div>
+          <div class="when">Jan 2026 - Present · San Marcos, CA (Remote)</div>
+        </div>
+        <ul>
+          <li>Own full-cycle multi-entity P&amp;L reporting across Girl &amp; Dug Inc., Girl &amp; Dug Farm Inc., and Lucky Growers Inc., consolidating monthly financials and delivering biweekly executive P&amp;L packages with actuals-vs-budget variance analysis and entity-level margin commentary.</li>
+          <li>Run a rolling weekly cash flow model and quarterly budget framework built from the ground up, integrating AP, payroll obligations, and off-shore co-owned vendor payment schedules to support liquidity planning across all three entities.</li>
+          <li>Lead end-to-end accounting operations, documenting 100% of QBO workflows, payroll (Paychex Flex), Shopify revenue reconciliation, and vendor payment SOPs into structured reference documentation.</li>
+          <li>Manage biweekly payroll, international wire transfers, contractor disbursements, and expense tracking, serving as primary finance liaison to the CEO for strategic financial decisions.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div>
+          <h3>Sr. FP&amp;A Associate</h3>
+          <div class="org">Can Do Brands</div>
+          <div class="when">Aug 2025 - Nov 2025 · Palm Beach, FL (Contract)</div>
+        </div>
+        <ul>
+          <li>Built and maintained an integrated SKU-level FP&amp;A model (Excel + Power Query) for dual distribution (FOB Asia and domestic warehouse), enabling monthly P&amp;L visibility by SKU, customer, and channel and driving 100% reconciliation of invoiced revenue vs collections.</li>
+          <li>Automated ingestion of 5+ weekly and monthly data feeds (Amazon ARA sales, Walmart POS, ERP AR ledger, 3PL charges, freight rates) into a pivot-ready analysis fact table.</li>
+          <li>Designed a unit economics engine calculating GP and CM per unit across 1P retailers, incorporating landed cost, variable opex, marketplace fees, and customer allowances.</li>
+          <li>Developed AR and cash collection schedules using payment terms logic, achieving accurate cash flow timing at the month and customer level.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div>
+          <h3>Financial Analyst, Supply Chain Controlling</h3>
+          <div class="org">Schindler Elevator Corporation</div>
+          <div class="when">Feb 2024 - Jun 2025 · Toledo, OH</div>
+        </div>
+        <ul>
+          <li>Led weekly cycle count cost reports for regional manufacturing and assembly sites, plus monthly and quarterly drop-ship cost accounting reports tracking $25M of parts yearly.</li>
+          <li>Assisted Associate Finance Managers and Financial Controllers with month-end close, GL entries, and invoices through SAP, and delivered month-end reporting including Supply Chain's P&amp;L analysis to executive leadership.</li>
+          <li>Led post month-end clearing and prioritization of key financial tasks, including batch and accounts clearing.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div>
+          <h3>Financial Analyst, FP&amp;A and Business Intelligence</h3>
+          <div class="org">Park Place Technologies</div>
+          <div class="when">Jun 2022 - Jan 2024 · Cleveland, OH</div>
+        </div>
+        <ul>
+          <li>Partnered with the Chief Revenue Officer on weekly forecasting for the $9M North American division and monthly forecasting across global divisions averaging $16M at month end.</li>
+          <li>Executed monthly pipeline analysis facilitating quarterly forecasts of up to $47M for all global divisions.</li>
+          <li>Analyzed sales rep ARR, total sales estimates, YoY growth, and quarterly forecasts, instrumental in forming the Named Account Reps team.</li>
+          <li>Developed and managed the biweekly sales deck integrating financial analysis, sales and revenue forecasts, pipeline, and ARR, presented to the CEO and Chief of Staff.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div>
+          <h3>Fractional CFO Engagements</h3>
+          <div class="org">Seafarer Consulting, LLC &amp; independent clients</div>
+          <div class="when">Concurrent advisory work</div>
+        </div>
+        <ul>
+          <li>Fractional CFO with Seafarer Consulting serving a portfolio of small and mid-sized businesses, where I designed and shipped the firm's live 66-company reporting platform on Cloudflare Workers.</li>
+          <li>Independent CFO-level engagements for Mesh Suture (venture-stage medical devices), Life Enrichment Counseling Center (multi-location behavioral health), an annuity carrier, and a seed-stage e-commerce marketplace: pricing strategy, hiring plans, profitability roadmaps, workforce structuring, and valuation.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-kicker">Case studies</div>
+    <h2>Featured Work</h2>
+    <p class="sec-intro">Twelve artifacts from real engagements, shown as they actually run. Click any image to view it full size.</p>
+
+    <div class="group"><span class="tag">Girl &amp; Dug · Controllership</span><span class="line"></span></div>
+    <div class="cards">
+
+      <div class="card">
+        <div><h3>Multi-Entity Semimonthly Close &amp; Consolidation</h3><div class="meta">Excel system · 77 sheets · 3 entities</div></div>
+        <a class="shot" href="images/gdf_entity_pl.jpg"><img loading="lazy" src="images/gdf_entity_pl.jpg" alt="Girl and Dug consolidated entity P&L, semimonthly columns"></a>
+        <p>A close system that consolidates Girl &amp; Dug Inc., Girl &amp; Dug Farm Inc., and Lucky Growers Inc. on a twice-monthly cadence, rolling 16 half-month periods into monthly and quarterly P&amp;Ls with percent-of-revenue analysis, pulled live from raw bank, credit card, and Shopify data.</p>
+        <ul>
+          <li>Categorizes roughly 3,200 raw bank and card transactions and 7,400+ rows of Shopify sales data directly into P&amp;L lines with zero re-keying.</li>
+          <li>Shopify-to-QuickBooks revenue reconciliation with variance tracking every period.</li>
+          <li>Shipping profitability module comparing freight billed to customers against actual carrier cost.</li>
+          <li>Cardholder-level spend attribution across nine company cards and three issuers.</li>
+        </ul>
+        <a class="shot" href="images/gdf_q2.jpg"><img loading="lazy" src="images/gdf_q2.jpg" alt="Q2 2026 quarterly consolidation"></a>
+        <div class="chips"><span class="chip hi">3 entities</span><span class="chip">16 semimonthly periods</span><span class="chip">Revenue reconciliation</span><span class="chip">Live from raw feeds</span></div>
+      </div>
+
+      <div class="card">
+        <div><h3>Certainty-First 4-Week Cash Flow</h3><div class="meta">Automated Excel forecast · Hourly rebuild from QBO API</div></div>
+        <a class="shot" href="images/gdf_4wk_cash.jpg"><img loading="lazy" src="images/gdf_4wk_cash.jpg" alt="4-week certainty-based cash flow for Girl and Dug Farm"></a>
+        <p>A rolling three-entity cash forecast built on a certainty-first philosophy: the headline view counts only live bank cash, committed fixed costs, and receivables from customers with a proven two-year payment record. A separate projection view places every open invoice and bill in the week its counterparty historically pays.</p>
+        <ul>
+          <li>Rebuilds automatically every hour from the QuickBooks Online API, anchored to live bank balances.</li>
+          <li>Scores 134 customers on actual payment behavior (median days to pay and spread) to qualify or bench nearly half a million dollars of open AR.</li>
+          <li>Auto-detects 29 recurring obligations from bank history, classifying cadence and predicting next payment dates.</li>
+        </ul>
+        <div class="chips"><span class="chip hi">Hourly refresh</span><span class="chip">Behavior-scored AR</span><span class="chip">3 entities</span><span class="chip">Standstill risk memo</span></div>
+      </div>
+
+      <div class="card">
+        <div><h3>Shared AP / AR Aging Dashboard</h3><div class="meta">Web application · Single file · Zero dependencies</div></div>
+        <a class="shot" href="images/apar_overview.png"><img loading="lazy" src="images/apar_overview.png" alt="AP AR tracker overview with aging buckets per company"></a>
+        <p>A zero-install web dashboard the finance team opens straight from a shared folder. It reads an hourly QuickBooks extract, computes aging live in the browser so buckets are always current as of today, and ties out to QuickBooks aging reports including credit memos, vendor credits, and unapplied payments.</p>
+        <ul>
+          <li>Overview plus per-company AR and AP views with search, aging filter chips, sorting, grouping, and CSV export.</li>
+          <li>Team-shared collection notes that sync through the File System Access API and merge safely by timestamp.</li>
+          <li>Automatic stale-data warning if the hourly QuickBooks feed stops running.</li>
+        </ul>
+        <a class="shot" href="images/apar_detail.png"><img loading="lazy" src="images/apar_detail.png" alt="AR detail view with invoices, aging buckets and notes"></a>
+        <div class="chips"><span class="chip hi">Serverless collaboration</span><span class="chip">5 aging buckets</span><span class="chip">Ties to QBO</span><span class="chip">Under 500 lines</span></div>
+      </div>
+
+      <div class="card">
+        <div><h3>Live Biweekly Payroll Expense Analysis</h3><div class="meta">Excel dashboard · 37 pay runs · 3 entities</div></div>
+        <a class="shot" href="images/gdf_payroll.jpg"><img loading="lazy" src="images/gdf_payroll.jpg" alt="Biweekly payroll expense analysis with KPI banner"></a>
+        <p>A KPI-led tracker consolidating 37 pay runs across three entities, decomposing roughly $2.25M of payroll cost into gross wages, employer taxes, net pay, and withholdings, sourced directly from QuickBooks payroll journals.</p>
+        <ul>
+          <li>Period-over-period movement computed inline so unusual pay runs stand out immediately.</li>
+          <li>Effective payroll tax rate (9.2%), average cost per period, and each entity's share of total labor cost.</li>
+          <li>Combines W-2 payroll with monthly 1099 contractor spend to show true total labor cost and workforce mix.</li>
+        </ul>
+        <div class="chips"><span class="chip hi">37 pay runs</span><span class="chip">W-2 vs 1099 mix</span><span class="chip">Effective tax rate</span></div>
+      </div>
+    </div>
+
+    <div class="group"><span class="tag">Mesh Suture · Fractional CFO</span><span class="line"></span></div>
+    <div class="cards">
+
+      <div class="card">
+        <div><h3>Monthly Finance Operating Model</h3><div class="meta">Excel system · 50 sheets · 41 months of actuals</div></div>
+        <a class="shot" href="images/mesh_pl_summary.jpg"><img loading="lazy" src="images/mesh_pl_summary.jpg" alt="Mesh Suture P&L summary spanning 41 months"></a>
+        <p>An integrated finance operating system for Mesh Suture, a venture-stage medical device manufacturer that grew revenue from $1.6M (FY23) to $5.6M (FY25): twelve presentation tabs over 38 data tabs unifying QuickBooks GL, Salesforce order data, payroll, budget, and distributor history into one refreshable model.</p>
+        <ul>
+          <li>Driver-based 10-month cash forecast layering hiring, tax, retirement plan, and pricing decisions onto a trailing operating baseline, answering when to raise, spend, or hold.</li>
+          <li>Modeled the response to a 150 percent supplier cost increase with SKU-level and distributor-level pricing scenarios, a recovery waterfall, and a two-way EBITDA sensitivity grid showing targeted price moves fully offset the shock.</li>
+          <li>Canada transfer price analysis benchmarked against economics across 11 international distributors, with break-even unit volumes.</li>
+          <li>Formula-written commentary cells that turn model outputs into plain-English recommendations which update automatically.</li>
+        </ul>
+        <div class="shots2">
+          <a class="shot" href="images/mesh_cash_forecast.jpg"><img loading="lazy" src="images/mesh_cash_forecast.jpg" alt="Mesh Suture 10-month cash forecast"></a>
+          <a class="shot" href="images/mesh_pricing.jpg"><img loading="lazy" src="images/mesh_pricing.jpg" alt="Pricing calculator with distributor detail and recovery waterfall"></a>
+        </div>
+        <div class="chips"><span class="chip hi">41 months actuals</span><span class="chip">Pricing strategy</span><span class="chip">Sensitivity grids</span><span class="chip">Transfer pricing</span></div>
+      </div>
+
+      <div class="card">
+        <div><h3>Sales Hiring Plan Board Deck</h3><div class="meta">Leadership presentation · 6 slides</div></div>
+        <a class="shot" href="images/mesh_deck_org.jpg"><img loading="lazy" src="images/mesh_deck_org.jpg" alt="3 regions, 11 sales FTE, 8.3M dollar FY27 revenue plan"></a>
+        <p>A tight board-style deck distilling the hiring model into a decision narrative: build a three-region US sales organization from 5 to 11 sales heads across an eight-quarter ramp, delivering an $8.3M FY27 revenue plan at roughly 81 percent contribution margin, with every figure traceable back to the operating model.</p>
+        <ul>
+          <li>Region-by-region quota and contribution economics with fully loaded cost per role, including incentive comp, bonus, travel, and payroll burden.</li>
+          <li>Gap analysis showing exactly how many additional account managers close the distance to the $10M stretch goal.</li>
+          <li>Affordability case proving EBITDA stays positive and margin improves in every scenario, with and without a new regional manager layer.</li>
+        </ul>
+        <a class="shot" href="images/mesh_deck_growth.jpg"><img loading="lazy" src="images/mesh_deck_growth.jpg" alt="Headcount versus revenue and contribution ramp chart"></a>
+        <div class="chips"><span class="chip hi">5 to 11 reps</span><span class="chip">8-quarter ramp</span><span class="chip">$8.3M FY27 plan</span></div>
+      </div>
+    </div>
+
+    <div class="group"><span class="tag">Can Do Brands · Consumer Products</span><span class="line"></span></div>
+    <div class="cards">
+
+      <div class="card">
+        <div><h3>53-Week Cash Flow &amp; Borrowing Base Model</h3><div class="meta">Excel system · 59 sheets · Full-year weekly horizon</div></div>
+        <a class="shot" href="images/cdb_cashflow53.jpg"><img loading="lazy" src="images/cdb_cashflow53.jpg" alt="53-week weekly cash flow grid"></a>
+        <p>A full-year weekly cash flow and asset-based lending model for a multi-channel importer selling through Walmart, Amazon, Menards, and other national retailers. AR, AP, inventory, purchase orders, and the sales forecast all roll into one weekly cash engine with revolver draw and repay logic, availability, and automatic collateral shortfall flagging.</p>
+        <ul>
+          <li>Forecasts collections on roughly 1,000 open invoices plus 1,600 projected receivable lines using a customer-level payment terms engine spanning 36 retail channels with terms from 30 to 120 days.</li>
+          <li>Converts 1,700+ purchase order lines into weekly cash needs, capturing deposits, balances, freight, duty, tariffs, and drayage with configurable timing offsets.</li>
+          <li>Full ABL mechanics: per-invoice eligibility testing, 85 percent AR and 60 percent inventory advance rates, sublimits, reserves, and over-advance policy, driven from a single configuration sheet so lender scenarios re-run in minutes.</li>
+          <li>Built with LAMBDA, LET, XLOOKUP, and dynamic arrays.</li>
+        </ul>
+        <a class="shot" href="images/cdb_borrowing_base.jpg"><img loading="lazy" src="images/cdb_borrowing_base.jpg" alt="Borrowing base ABL snapshot with availability"></a>
+        <div class="chips"><span class="chip hi">ABL revolver logic</span><span class="chip">53 weekly columns</span><span class="chip">1,700+ POs</span><span class="chip">36 customer terms</span></div>
+      </div>
+    </div>
+
+    <div class="group"><span class="tag">Life Enrichment Counseling Center · Fractional CFO</span><span class="line"></span></div>
+    <div class="cards">
+
+      <div class="card">
+        <div><h3>Profitability Roadmap to a 20% Margin</h3><div class="meta">CFO advisory deck · 13 slides</div></div>
+        <a class="shot" href="images/lecc_forecast.jpg"><img loading="lazy" src="images/lecc_forecast.jpg" alt="Seasonality-adjusted 2026 forecast slide"></a>
+        <p>A turnaround plan charting the multi-location counseling practice's path from a 3.4 percent EBITDA margin to a 20 percent target, grounded in restated books and a seasonality-adjusted $1.72M revenue forecast rather than the owner's $1.8M straight-line extrapolation.</p>
+        <ul>
+          <li>Reconciled gaps between annual and monthly statements and absorbed a mid-year restatement that swung forecast EBITDA by roughly $57K before planning on the corrected numbers.</li>
+          <li>Quantified the full $366,841 gap to the 20 percent target, then closed $250,618 (68 percent) with eleven named, costed levers.</li>
+          <li>Translated clinician utilization into dollars: one extra session per therapist per week is worth about $69K of annual profit.</li>
+          <li>Sequenced everything into a quarter-by-quarter roadmap through 2027, ending at a practice valuation of roughly $1.72M at a 5x EBITDA multiple.</li>
+        </ul>
+        <a class="shot" href="images/lecc_bridge.jpg"><img loading="lazy" src="images/lecc_bridge.jpg" alt="EBITDA bridge from 3 percent margin to 20 percent"></a>
+        <div class="chips"><span class="chip hi">11 quantified levers</span><span class="chip">Seasonality forecast</span><span class="chip">Valuation framing</span></div>
+      </div>
+
+      <div class="card">
+        <div><h3>W-2 vs 1099 Workforce Conversion Analysis</h3><div class="meta">Decision deck · 8 slides</div></div>
+        <a class="shot" href="images/lecc_w2_summary.jpg"><img loading="lazy" src="images/lecc_w2_summary.jpg" alt="Executive summary of the 1099 to W-2 conversion economics"></a>
+        <p>A ground-up analysis of converting ten contractor clinicians to employment, itemizing employer FICA, FUTA, state unemployment, 401(k) match, health stipends, PTO, and holidays into a fully burdened cost of +$94,322 per year, an 18.2 percent premium on the $517K contractor base.</p>
+        <ul>
+          <li>Showed immediate full conversion would push EBITDA negative (to roughly -$93K), then redesigned the move as a three-phase January 2027 plan the practice can afford, sequenced with the profitability roadmap.</li>
+          <li>Applied the IRS common-law control test to keep genuine business-entity vendors correctly classified as 1099.</li>
+          <li>Reframed conversion for staff as same rate, better package, quantifying an average $9,270 (+17.9 percent) package value gain per clinician.</li>
+          <li>Tied classification cleanup to exit value, positioning it as removal of a diligence red flag for future buyers.</li>
+        </ul>
+        <a class="shot" href="images/lecc_w2_cost.jpg"><img loading="lazy" src="images/lecc_w2_cost.jpg" alt="Cost to convert chart, contractor spend versus fully burdened W-2"></a>
+        <div class="chips"><span class="chip hi">Burdened labor cost</span><span class="chip">3-phase plan</span><span class="chip">Compliance judgment</span></div>
+      </div>
+    </div>
+
+    <div class="group"><span class="tag">Valuation &amp; Projection Engagements</span><span class="line"></span></div>
+    <div class="cards">
+
+      <div class="card">
+        <div><h3>Startup Valuation Model, Eight Methods</h3><div class="meta">Excel model · 30 sheets · Seed-stage marketplace</div></div>
+        <a class="shot" href="images/valuation_summary.jpg"><img loading="lazy" src="images/valuation_summary.jpg" alt="Valuation summary blending eight methods into an 11 million dollar pre-money figure"></a>
+        <p>An investor-grade valuation package for a seed-stage e-commerce marketplace, triangulating eight methods (Berkus, Scorecard, Risk Factor Summation, revenue multiples in three cases, sourced comparables, and two variants of the VC method) into a weighted $11.0M pre-money valuation, $12.5M post-money after a $1.5M seed round.</p>
+        <ul>
+          <li>CAPM discount rate built from first principles: beta computed from 252 days of daily log returns on public comparables against the S&amp;P 500, risk-free rate from a year of daily Treasury yields.</li>
+          <li>Parallel pre-money and post-money monthly three-statement models over five years, showing investors exactly how the raise changes the P&amp;L, balance sheet, and runway.</li>
+          <li>Scenario-switchable marketplace revenue engine with low, base, and high take-rate cases.</li>
+          <li>Every comparable documented with source citations and stage discounts, keeping the number defensible in diligence.</li>
+        </ul>
+        <a class="shot" href="images/valuation_investors.jpg"><img loading="lazy" src="images/valuation_investors.jpg" alt="For Investors summary tab"></a>
+        <div class="chips"><span class="chip hi">8 methods blended</span><span class="chip">First-principles CAPM</span><span class="chip">Pre &amp; post money</span></div>
+      </div>
+
+      <div class="card">
+        <div><h3>Annuity Carrier 5-Year Projection</h3><div class="meta">Excel model · Statutory, GAAP &amp; cash views</div></div>
+        <a class="shot" href="images/annuity_comparative_is.jpg"><img loading="lazy" src="images/annuity_comparative_is.jpg" alt="Comparative income statement under regulatory, GAAP and cash bases"></a>
+        <p>A projection model for a carrier writing multi-year guaranteed annuities on roughly $55M of first-year premium, with a comparative income statement presenting the same year under statutory, GAAP, and cash accounting side by side, and line-by-line commentary on DAC amortization, reserve changes, and non-cash adjustments.</p>
+        <ul>
+          <li>Cohort vintage engine tracks each premium year's policyholder reserves and invested assets in paired roll-forwards.</li>
+          <li>Models spread income between the 5 percent portfolio yield and the 6 percent guaranteed crediting rate through maturity payouts.</li>
+          <li>Fully parameterized on six named-range drivers so stakeholders flex crediting rate, commissions, growth, and yield in seconds.</li>
+        </ul>
+        <a class="shot" href="images/annuity_5yr.jpg"><img loading="lazy" src="images/annuity_5yr.jpg" alt="5-year financial projections under regulatory and GAAP frameworks"></a>
+        <div class="chips"><span class="chip hi">3 accounting bases</span><span class="chip">5 premium vintages</span><span class="chip">Reserve roll-forwards</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="platform">
+  <div class="wrap">
+    <div class="sec-kicker">Finance automation</div>
+    <h2>Seafarer Dashboards: a live reporting platform</h2>
+    <p class="sec-intro">Built as fractional CFO at Seafarer Consulting: a serverless platform that turns any connected QuickBooks Online company into a polished, always-current executive dashboard in about twenty seconds. It replaced hours of monthly report assembly per client with a system that maintains itself. <a href="https://seafarer-hub.seafarer-consulting.workers.dev/" target="_blank" rel="noopener">Visit the live hub →</a></p>
+    <div class="band">
+      <div>
+        <a class="shot" href="images/seafarer_hub.png"><img loading="lazy" src="images/seafarer_hub.png" alt="Seafarer Dashboards hub listing 66 live companies"></a>
+        <p class="caption" style="margin-top:8px">The central hub: 66 companies live across construction, healthcare, technology, hospitality, retail, and professional services.</p>
+      </div>
+      <div>
+        <a class="shot" href="images/seafarer_report.png"><img loading="lazy" src="images/seafarer_report.png" alt="A live Sea Report dashboard with KPIs, TTM charts and balance sheet snapshot"></a>
+        <p class="caption" style="margin-top:8px">Each Sea Report: KPI cards with deltas, trailing-twelve-month charts, an executive summary, and a balance sheet snapshot, with light and dark modes and one-click PDF export.</p>
+      </div>
+    </div>
+    <div class="band" style="margin-top:14px">
+      <ul style="margin:0">
+        <li>One-click onboarding: any connected QuickBooks company becomes a live dashboard in about twenty seconds.</li>
+        <li>Auto-generated narrative headlines summarizing the trailing period in plain English.</li>
+        <li>Read-only by design, auto-refreshed from the QuickBooks Online API.</li>
+      </ul>
+      <ul style="margin:0">
+        <li>Serverless architecture on Cloudflare Workers: no servers to patch, nothing to babysit.</li>
+        <li>81 QuickBooks realms connected, 66 dashboards published and counting.</li>
+        <li>Light and dark modes, one-click PDF export for board packets.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-kicker">Toolkit</div>
+    <h2>Skills &amp; Tools</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>Finance &amp; Accounting</h3>
+        <div class="chips"><span class="chip">Corporate FP&amp;A</span><span class="chip">GAAP</span><span class="chip">ASC 606</span><span class="chip">Budgeting &amp; forecasting</span><span class="chip">Three-statement modeling</span><span class="chip">Financial accounting</span><span class="chip">Board reporting</span><span class="chip">NRR / GRR / churn</span><span class="chip">Audit ownership</span><span class="chip">Internal controls / SOX</span><span class="chip">Formal people management</span><span class="chip">CPA in progress</span></div>
+      </div>
+      <div class="skill">
+        <h3>Systems &amp; Platforms</h3>
+        <div class="chips"><span class="chip">MS Excel + Power Query</span><span class="chip">SAP</span><span class="chip">QuickBooks Online</span><span class="chip">NetSuite</span><span class="chip">Salesforce</span><span class="chip">Shopify</span><span class="chip">Airtable</span><span class="chip">Paychex Flex</span></div>
+      </div>
+      <div class="skill">
+        <h3>Programming &amp; BI</h3>
+        <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">MATLAB</span><span class="chip">LaTeX</span><span class="chip">Tableau</span><span class="chip">Power BI</span></div>
+      </div>
+      <div class="skill">
+        <h3>AI &amp; Automation</h3>
+        <div class="chips"><span class="chip">Claude Code</span><span class="chip">ChatGPT Codex</span><span class="chip">MCP server &amp; API integrations (QBO, NetSuite, Shopify, UPS)</span><span class="chip">AI-built AP/AR, PO &amp; invoicing systems in production</span><span class="chip">AI-assisted reconciliation &amp; reporting</span><span class="chip">Python finance automation</span><span class="chip">Cloudflare Workers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-kicker">Background</div>
+    <h2>Education</h2>
+    <div class="edu">
+      <h3>Earlham College · Richmond, IN</h3>
+      <p><b>B.A. (Double Major): Mathematics and Business Administration, Finance</b> · Aug 2018 - May 2022</p>
+      <p>Collegiate and Departmental Honors · Davis United World College Scholar · Semester abroad in France at Sciences Po (Paris) and ICT (Toulouse)</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's talk</h2>
+      <p>I am open to finance leadership opportunities. References and guided walkthroughs of any of the work above are available on request.</p>
+      <div class="cta" style="justify-content:center">
+        <a class="btn primary" href="mailto:shahmir99@live.com">shahmir99@live.com</a>
+        <a class="btn" href="tel:+19423809015">+1 (942) 380 9015</a>
+        <a class="btn" href="https://linkedin.com/in/shah-mir-aizaz-597928190" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Shah Mir Aizaz · Vancouver, BC · Finance Portfolio</div>
+</footer>
+
+<div id="lightbox" aria-hidden="true"><img id="lightboxImg" alt=""></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('themeBtn');
+  var root = document.documentElement;
+  function apply(t){ root.setAttribute('data-theme', t); btn.textContent = t === 'dark' ? 'Light' : 'Dark'; }
+  var pref = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  apply(pref);
+  btn.addEventListener('click', function(){ apply(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+
+  var lb = document.getElementById('lightbox'), lbImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('a.shot').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      lbImg.src = a.getAttribute('href');
+      lb.classList.add('on');
+    });
+  });
+  lb.addEventListener('click', function(){ lb.classList.remove('on'); lbImg.src=''; });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ lb.classList.remove('on'); lbImg.src=''; } });
+})();
+</script>
+</body>
+</html>
